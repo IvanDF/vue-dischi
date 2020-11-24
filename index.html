@@ -23,12 +23,8 @@
         <main class="main-section">
             <div class="filter">
                 <span> Filter by genre: </span> 
-                <select>
-                    <option value="all">All</option>
-                    <option value="rock">Rock</option>
-                    <option value="pop">Pop</option>
-                    <option value="jazz">Jazz</option>
-                    <option value="metal">Metal</option>
+                <select v-model="selected" @change="genreSelected">
+                    <option v-for="option in options" :value="option">{{option}}</option>
                 </select>
             </div>
             <div class="cds-container">
