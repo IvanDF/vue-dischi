@@ -27,9 +27,14 @@
                     <option v-for="option in options" :value="option">{{option}}</option>
                 </select>
             </div>
-            <div class="cds-container">
+            <div class="cds-container"
+                v-if="loaded"
+                >
+
                 <div class="cd"
-                    v-for="cd in cds" >
+                    v-for="cd in cds" 
+   
+                    >
                     <div class="image">
                         <img :src="cd.poster" :alt="cd.title">
                     </div>
@@ -38,6 +43,13 @@
                     <div class="year"> {{ cd.year }} </div>
                     <div class="genre"> {{ cd.genre }} </div>
                 </div>
+
+            </div>
+
+            <div class="loading"
+                v-else
+                >
+                LOADING...
             </div>
         </main>
 

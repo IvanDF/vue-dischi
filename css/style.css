@@ -29,13 +29,21 @@
 /* MAIN */
 
 .filter {
-    text-align: center;
     margin-top: 50px;
     color: #fff;
+    text-align: center;
+    font-size: 22px;
 }
 
 .filter select {
+    min-width: 100px;
     margin-left: 5px;
+    color: #fff;
+    background: none;
+    font-size: 18px;
+    border: none;
+    border-bottom: solid 2px #fff;
+    outline: none;
 }
 
 .main-section {
@@ -58,10 +66,22 @@
     background: #2f3a46;
     color: #fff;
     text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 350ms,
+                border-radius 250ms;
+}
+
+.cd:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    border-radius: 15px;
 }
 
 .cd .image {
+    display: flex;
     min-height: 170px;
+    justify-content: center;
+    align-items: center;
 }
 
 .cd .image img {
@@ -89,4 +109,15 @@
 
 .cd .genre {
     font-size: 14px;
+}
+
+/* LOADING */
+
+.loading {
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 43px;
 }
