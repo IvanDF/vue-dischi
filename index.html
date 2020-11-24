@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <!-- ICON -->
     <link rel="icon" href="./img/logo.png">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- MAIN STYLE -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- development version -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 
@@ -25,81 +32,23 @@
                 </select>
             </div>
             <div class="cds-container">
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
-                </div>
-                <div class="cd">
-                    <img src="./img/logo.png" alt="">
-                    <h3 class="title">New jersey</h3>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="year">1988</div>
-                    <div class="genre">Rock</div>
+                <div class="cd"
+                    v-for="cd in cds" >
+                    <div class="image">
+                        <img :src="cd.poster" :alt="cd.title">
+                    </div>
+                    <h3 class="title"> {{ cd.title }} </h3>
+                    <div class="artist"> {{ cd.author }} </div>
+                    <div class="year"> {{ cd.year }} </div>
+                    <div class="genre"> {{ cd.genre }} </div>
                 </div>
             </div>
         </main>
 
     </div>
-    
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- MAIN JS -->
     <script src="./js/main.js"></script>
 </body>
 </html>
