@@ -1,0 +1,87 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#spotify {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.main-header {
+    padding: 10px 20px 8px;
+    display: flex;
+    align-items: center;
+    background: #2f3a46;
+}
+
+.main-header img {
+    height: 50px;
+}
+
+/* MAIN */
+
+.filter {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.filter select {
+    margin-left: 5px;
+}
+
+.main-section {
+    flex-grow: 1;
+    background: #1f2d3b;
+}
+
+.cds-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+}
+
+.cd {
+    flex-basis: 200px;
+    min-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: #2f3a46;
+    color: #fff;
+    text-align: center;
+}
+
+.cd img {
+    width: 100%;
+}
+
+.cd .title {
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.cd .artist,
+.cd .year {
+    color: #808080;
+}
+.cd .artist {
+    font-size: 18px;
+}
+
+.cd .year {
+    margin: 10px 0 20px;
+    font-size: 15px;
+}
+
+.cd .genre {
+    font-size: 14px;
+}
